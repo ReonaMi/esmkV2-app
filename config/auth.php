@@ -46,6 +46,17 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'pengelola' => [
+            'driver' => 'session',
+            'provider' => 'pengelolas',
+        ],
+
+        'pengelola-api' => [
+            'driver' => 'token',
+            'provider' => 'pengelolas',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -69,6 +80,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'pengelolas' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Pengelola::class,
         ],
 
         // 'users' => [
