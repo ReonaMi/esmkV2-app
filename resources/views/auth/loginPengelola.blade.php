@@ -8,7 +8,12 @@
     <title>Document</title>
 </head>
 <body class="text-center">
-    <p>a</p>
+    <form action="{{ route('post.loginPengelola') }}" method="post">
+        @csrf
+        <input type="email" name="email" id="email">
+        <input type="password" name="password" id="password">
+        <button type="submit">Login</button>
+    </form>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </body>
 </html>
