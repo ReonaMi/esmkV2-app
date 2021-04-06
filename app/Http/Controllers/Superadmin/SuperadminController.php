@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 class SuperadminController extends Controller
 {
     public function index(){
-        return view('superadmin.dashboardSuperadmin');
+        $title = 'Dashboard Superadmin';
+        return view('superadmin.dashboardSuperadmin', [
+            'title' => $title
+        ]);
     }
 }
