@@ -57,6 +57,17 @@ return [
             'provider' => 'pengelolas',
             'hash' => false,
         ],
+
+        'siswa' => [
+            'driver' => 'session',
+            'provider' => 'siswas'
+        ],
+
+        'siswa-api' => [
+            'driver' => 'token',
+            'provider' => 'siswas',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -85,6 +96,11 @@ return [
         'pengelolas' => [
             'driver' => 'eloquent',
             'model' => App\Models\Pengelola::class,
+        ],
+
+        'siswas' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Siswa::class,
         ],
 
         // 'users' => [

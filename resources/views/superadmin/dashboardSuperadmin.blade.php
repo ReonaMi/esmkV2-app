@@ -33,7 +33,8 @@
     </button>
     <ul class="navbar-nav px-3 w-100">
         <li class="nav-item text-nowrap">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalKeluar">Keluar</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalKeluar">Keluar
+            </button>
         </li>
     </ul>
 </header>
@@ -44,72 +45,33 @@
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
+                        <a class="nav-link active" aria-current="page" href="{{ route('get.indexSuperadmin') }}">
                             <span data-feather="home"></span>
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <span data-feather="file"></span>
-                            Orders
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="shopping-cart"></span>
-                            Products
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
                             <span data-feather="users"></span>
-                            Customers
+                            Manajemen Pengguna
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <span data-feather="bar-chart-2"></span>
-                            Reports
+                            <span data-feather="database"></span>
+                            Data Guru
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <span data-feather="layers"></span>
-                            Integrations
-                        </a>
-                    </li>
-                </ul>
-
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                    <span>Saved reports</span>
-                    <a class="link-secondary" href="#" aria-label="Add a new report">
-                        <span data-feather="plus-circle"></span>
-                    </a>
-                </h6>
-                <ul class="nav flex-column mb-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file-text"></span>
-                            Current month
+                            <span data-feather="database"></span>
+                            Data kelas
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <span data-feather="file-text"></span>
-                            Last quarter
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file-text"></span>
-                            Social engagement
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file-text"></span>
-                            Year-end sale
+                            <span data-feather="database"></span>
+                            Data Siswa
                         </a>
                     </li>
                 </ul>
@@ -120,147 +82,36 @@
             <div
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">{{ $title }}</h1>
-                <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group me-2">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                    </div>
-                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                        <span data-feather="calendar"></span>
-                        This week
-                    </button>
-                </div>
             </div>
 
-            <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-
-            <h2>Section title</h2>
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
-                    </tr>
-                    <tr>
-                        <td>1,002</td>
-                        <td>placeholder</td>
-                        <td>irrelevant</td>
-                        <td>visual</td>
-                        <td>layout</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>data</td>
-                        <td>rich</td>
-                        <td>dashboard</td>
-                        <td>tabular</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>information</td>
-                        <td>placeholder</td>
-                        <td>illustrative</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,004</td>
-                        <td>text</td>
-                        <td>random</td>
-                        <td>layout</td>
-                        <td>dashboard</td>
-                    </tr>
-                    <tr>
-                        <td>1,005</td>
-                        <td>dashboard</td>
-                        <td>irrelevant</td>
-                        <td>text</td>
-                        <td>placeholder</td>
-                    </tr>
-                    <tr>
-                        <td>1,006</td>
-                        <td>dashboard</td>
-                        <td>illustrative</td>
-                        <td>rich</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,007</td>
-                        <td>placeholder</td>
-                        <td>tabular</td>
-                        <td>information</td>
-                        <td>irrelevant</td>
-                    </tr>
-                    <tr>
-                        <td>1,008</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
-                    </tr>
-                    <tr>
-                        <td>1,009</td>
-                        <td>placeholder</td>
-                        <td>irrelevant</td>
-                        <td>visual</td>
-                        <td>layout</td>
-                    </tr>
-                    <tr>
-                        <td>1,010</td>
-                        <td>data</td>
-                        <td>rich</td>
-                        <td>dashboard</td>
-                        <td>tabular</td>
-                    </tr>
-                    <tr>
-                        <td>1,011</td>
-                        <td>information</td>
-                        <td>placeholder</td>
-                        <td>illustrative</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,012</td>
-                        <td>text</td>
-                        <td>placeholder</td>
-                        <td>layout</td>
-                        <td>dashboard</td>
-                    </tr>
-                    <tr>
-                        <td>1,013</td>
-                        <td>dashboard</td>
-                        <td>irrelevant</td>
-                        <td>text</td>
-                        <td>visual</td>
-                    </tr>
-                    <tr>
-                        <td>1,014</td>
-                        <td>dashboard</td>
-                        <td>illustrative</td>
-                        <td>rich</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,015</td>
-                        <td>random</td>
-                        <td>tabular</td>
-                        <td>information</td>
-                        <td>text</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="row row-cols-3 align-items-stretch py-5">
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                         style="background-image: url('https://i.pinimg.com/originals/be/ea/58/beea58cf51b99a0b171a9dd095e36bcd.jpg');">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h2 class="pt-5 mt-5 display-6 lh-1 fw-bold text-white">Jumlah Siswa</h2>
+                            <h1 class="mt-2 mb-4 fw-bold text-white-50">{{ $jumlahSiswa }}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                         style="background-image: url('https://i.pinimg.com/originals/be/ea/58/beea58cf51b99a0b171a9dd095e36bcd.jpg');">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h2 class="pt-5 mt-5 display-6 lh-1 fw-bold text-white">Jumlah Guru</h2>
+                            <h1 class="mt-2 mb-4 fw-bold text-white-50">{{ $jumlahGuru }}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                         style="background-image: url('https://i.pinimg.com/originals/be/ea/58/beea58cf51b99a0b171a9dd095e36bcd.jpg');">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h2 class="pt-5 mt-5 display-6 lh-1 fw-bold text-white">Jumlah Admin</h2>
+                            <h1 class="mt-2 mb-4 fw-bold text-white-50">{{ $jumlahPengelola }}</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
@@ -268,9 +119,18 @@
 
 <!-- Modal -->
 <div class="modal fade" id="modalKeluar" tabindex="-1" aria-labelledby="modalKeluarLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <h5 class="modal-title" id="modalKeluarLabel">Keluar</h5>
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Keluar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-danger"
+                        onclick="location.href='{{ route("get.logoutSuperadmin") }}'">Keluar
+                </button>
+            </div>
         </div>
     </div>
 </div>

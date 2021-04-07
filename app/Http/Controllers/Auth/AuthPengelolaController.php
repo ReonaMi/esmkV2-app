@@ -27,6 +27,12 @@ class AuthPengelolaController extends Controller
                 $checkRole = Auth::guard('pengelola')->user();
                 if ($checkRole->hasRole('superadmin')) {
                     return redirect()->route('get.indexSuperadmin');
+                }elseif ($checkRole->hasRole('admin')){
+                    return redirect()->route('get.indexAdmin');
+                }elseif ($checkRole->hasRole('kesiswaan')){
+                    return redirect()->route('get.indexKesiswaan');
+                }elseif ($checkRole->hasRole('toolman')){
+                    return redirect()->route('get.indexToolman');
                 }
             } else {
                 $message = "Maaf Anda Bukan Admin!";
